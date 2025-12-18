@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page d'accueil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script><!--defer pour attendre le chargement complet de la page avant d'afficher le script-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <section class="entete1">
+            <div class="image">
+                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+            </div>
+
+            <!-- <div class="recherche">
+                <label for="rech"> Recherche: </label>
+                <input type="search" id="rech" placeholder="Rechercher...">
+            </div>-->
+             <div class="devise">
+                <p class="devi">L'excellence sans frontieres</p>
+                <p class="excell">🎓</p>
+            </div>
+
+            <div class="heure">
+                <p>Date d'aujourd'hui : <span id="date"></span></p>
+                <p>Heure actuel       : <span id="heur"></span></p>
+            </div>
+           
+        </section>
+        <section class="entete2">
+            <nav>
+                <ul class="menu">
+                    <li><a class="menuclasscolor" href="index.html" >Accueil</a></li>
+
+                    <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
+
+                    <li><a class="menuclass" href="emploi.html">Emplois du temps</a></li>
+                    <li><a class="menuclass" href="contact.html">Contacts</a></li>
+                </ul>
+
+            </nav>
+        </section>
+
+
+
+    </header>
+
+    <main>
+        <section class="pre-une-bien">
+            <div class="bienvenue">
+                 <h1 class="defile" ><span id="salutation"></span>, bienvenue sur le site de l'Université OpenWorld</h1>
+            </div>
+            
+           
+           
+            <ul class="pre-une">
+                <!-- bouton voir les filieres-->
+                
+                <li  ><a  href="#present" class="pre">Presentation</a></li>
+              <!--  <li  ><a  href="#la-une" class="un">A la une</a></li>-->
+            </ul>
+             <section class="btn_at_left">
+                  <a href="filieres.html" class="btn">Voir les filières</a>
+            </section>
+        </section>
+        <!-- section a la une -->
+        <section class="image_la_une">
+                <div id="trans">
+                    <img id="topho" src="images/photos/inscription.jpg" alt="a la une">
+                </div>
+                
+                <div class="image_side">
+                    <img width="100%" style="margin-bottom: 5%;" src="images/photos/etudiant.jpg">
+                    <img width="100%" src="images/photos/doctorants.jpeg"> 
+                </div>
+            
+            
+           
+                 
+            <img width="60%" src="images/photos/fasomebo.png">
+
+        </section>
+        <!-- section presentation -->
+        <section class="presentation">
+            <h1 id="present">Presentation</h1>
+            <p>
+                L'université OpenWorld est un établissement privé d'enseignement supérieur de premier plan, dédié à l'excellence académique, à la recherche innovante et au développement intégral de ses étudiants.
+                Cet universite  <strong>forme les étudiants partout dans le monde</strong>  grace à la téléconference .
+                
+                <div id="contenu_cache">
+                    <p id="paragraphe_presentation">
+                        <ul type="none">
+                            <li><h2>Notre Mission et Nos Valeurs</h2></li>
+                        </ul>
+                                         
+                    Fondée en 2015, notre université s'est imposée comme un pilier du savoir et de l'innovation partout dans le monde entier.<br>
+                    OpenWorld à pour mission fondamentale de former les leaders et les penseurs de demain .<br>
+                    Pour se faire,elle poursuit les objectifs suivant:<br>
+                    <ul>
+                        <li>L'Excellence Académique avec des programmes rigoureux et à jour, encadrés par des professeurs-chercheurs passionnés;</li>
+                        <li>Un engagement constant dans la recherche;</li>
+                        <li> La contribution au développement économique, social et culturel du pays ;</li>
+                        <li> Encourager les étudiants à s'impliquer localement et globalement;</li>
+                        <li>La coopération en matière de formation et de recherche ;</li>
+                        <li>La promotion des échanges inter universitaires.</li>
+                    </ul>
+                                           
+                    L'Université OpenWorld forme ces etudiants dans divers domaines <strong>Informatiques</strong> notaments:
+                    <ul>
+                        <li>Le developpement logiciel;</li>
+                        <li>La cybersécurité;</li>
+                        <li>Les reseaux et systemes;</li>
+                        <li>Data science et Intelligence Artificielle(IA).</li>
+                    </ul>
+                                            
+                    Nous offrons des diplômes de Licence, Master, et Doctorat qui sont reconnus à l'échelle nationale et internationale.
+                   
+                    Nous préparons nos diplômés pour une carrière mondiale grâce à nos partenariats avec plus de 20 universités dans le monde y compris :
+                    <ul>
+                        <li><a href="https://www.uts.bf">L'Université THOMAS SANKARA;</a>  </li>
+                        <li><a href="https://www.ujkz.bf">L'Université JOSEPH KI ZERBO;</a></li>
+                        <li><a href="https://web.mit.edu">Massachusetts Institute of Technology;</a></li>
+                        <li><a href="https://www.harvard.edu">Harvard University</a></li>
+                    </u>     
+                    Si vous êtes intéressé par l'informatique , l'Université OpenWorld vous offrira l'environnement et les outils nécessaires pour atteindre vos plus grandes ambitions.
+                    OpenWorld est situé a Ouagadougou(BURKINA FASO) en afrique de l'ouest.
+
+                    OpenWorld l'excellence sans frontière.
+                    Contacter OpenWorld
+                    </p>
+                   
+                </div>
+                <button id="btn_voir_plus" onclick="ContenuVP()">Voir plus</button>
+            </p>
+        </section>
+        <!-- section a la une -->
+        <section class="a-la-une">
+            <h2 id="la-une">À la une</h2>
+            <article class="une">
+                <h3>Inscriptions ouvertes pour 2025</h3>
+                <p>Rejoignez nos programmes de Licence et Master en Informatique.</p>
+            </article>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>copyrigth &copy 2025 Université OpenWorld | Allaye BAMOGO</p>
+    </footer>
+</body>
+
+</html>

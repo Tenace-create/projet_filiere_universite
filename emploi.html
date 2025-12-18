@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page d'accueil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <section class="entete1">
+            <div class="image">
+                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+            </div>
+
+            <!-- <div class="recherche">
+                <label for="rech"> Recherche: </label>
+                <input type="search" id="rech" placeholder="Taper un mot-cle">
+            </div>-->
+             <div class="devise">
+                <p class="devi">L'excellence sans frontieres</p>
+                <p class="excell">🎓</p>
+            </div>
+
+            <div class="heure">
+                <p>Date d'aujourd'hui : <span id="date"></span></p>
+                <p>Heure actuel       : <span id="heur"></span></p>
+            </div>
+           
+        </section>
+        <section class="entete2">
+            <nav autocorrect="on">
+                <ul class="menu">
+                    <li><a class="menuclass" href="index.html" >Accueil</a></li>
+
+                    <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
+
+                    <li><a class="menuclasscolor" href="emploi.html">Emplois du temps</a></li>
+                    <li><a class="menuclass" href="contact.html">Contacts</a></li>
+                </ul>
+
+            </nav>
+        </section>
+
+
+
+    </header>
+
+    <main>
+      <h1 id="etitre">Les emplois du temps de nos filieres</h1>
+        <hr><!--ligne horizontale-->
+        <section class="triE">
+            <label for="trie"></label>        
+            <select name="trie" id="trie">
+                
+                    <option value="Tous">Tout les cours</option>
+                    <option value="matin">Les cours matin</option>
+                    <option value="midi">Les cours de l'après midi</option>
+            
+            </select>
+        </section>
+        <section class="cadre" id="a_filtrer">
+                <div>
+                    <table class="filiereJustifie" border="2" width="100%" >
+                    <caption>Emploi du temps de la semaine du 12 janvier au 17 janvier 2026 <br> (3eme anneé) L3/S6 OPTION : reseau</caption>
+                    <tr>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                        <th>Samedi</th>
+                    </tr>
+                    <tr class="matin_temp">
+                        <td colspan="6" align="middle">Matin : 8h - 12h</td>
+                    </tr>
+                    <tr class="matin">
+                        <td>cours1</td>
+                        <td>cours2</td>
+                        <td>cours3</td>
+                        <td></td>
+                        <td>cours5</td>
+                        <td>cours6</td>
+                    </tr>
+                    <tr class="midi_temp">
+                        <td colspan="6" align="middle">Après midi : 13h30 - 17h30</td>
+                    </tr>
+                    <tr class="midi">
+                        <td>cours1</td>
+                        <td></td>
+                        <td>cours3</td>
+                        <td>cours4</td>
+                        <td>cours5</td>
+                        <td>cours6</td>
+                    </tr>
+        
+                    
+                </table>
+                    <p">NB:Sous resérve d'un réaménagement à convenir avec l'Enseignant.<br></p>
+                    <p class="signepar">PrBouriema Zerbo/Directeur Adjoint</p>
+            </div>
+            
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>copyrigth &copy 2025 Université OpenWorld | Allaye BAMOGO</p>
+    </footer>
+</body>
+
+</html>

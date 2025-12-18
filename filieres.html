@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page d'accueil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <section class="entete1">
+            <div class="image">
+                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+            </div>
+
+            <div class="devise">
+                <p class="devi">L'excellence sans frontieres</p>
+                <p class="excell">🎓</p>
+            </div>
+
+            <div class="heure">
+                <p>Date d'aujourd'hui : <span id="date"></span></p>
+                <p>Heure actuel       : <span id="heur"></span></p>
+            </div>
+           
+        </section>
+        <section class="entete2">
+            <nav autocorrect="on">
+                <ul class="menu">
+                    <li><a class="menuclass" href="index.html" >Accueil</a></li>
+
+                    <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
+
+                    <li><a class="menuclass" href="emploi.html">Emplois du temps</a></li>
+                    <li><a class="menuclass" href="contact.html">Contacts</a></li>
+                </ul>
+
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <h1 id="etitre">Nos filieres</h1>
+        <hr><!--ligne horizontale-->
+        <div class="recherche">
+                <label for="rech"> Recherche: </label>
+                <input type="text" id="rech" placeholder="Taper un mot-cle">
+        </div>
+        <section class="cadre" id="champ">
+            <table class="filiereJustifie" border="2" width="25%" >
+                <caption>Developpement logiciel</caption>
+                <tr>
+                    <th>Niveau</th>
+                    <th>Description</th>
+                    <th>Dureé</th>
+                    <th>Deboucheé</th>
+                </tr>
+                <tr>
+                    <td>Licence1</td>
+                    <td rowspan="3">Cette filière forme les etudiants a être capable de concevoir, developper et deployer des logiciels et applications .Son objectif est de former de architectes et des developpeurs capables de gérer le cycle de vie complet d'un logiciel complexe, du besoin initial à la maintenance.</td>
+                    <td>2H</td>
+                    <td>desdd</td>
+                </tr>
+                <tr>
+                    <td>Licence2</td>
+                    <td>2H</td>
+                    <td>desdd</td>
+                </tr>
+                <tr>
+                    <td>Licence3</td>
+                    <td>2H</td>
+                    <td>desdd</td>
+                </tr>
+                
+            </table>
+
+             <table class="filiereJustifie" border="2" width="25%" >
+                <caption>Licence en reseau</caption>
+                <tr>
+                    <th>Niveau</th>
+                    <th>Description</th>
+                    <th>Dureé</th>
+                    <th>Deboucheé</th>
+                </tr>
+                <tr>
+                    <td>Licence1</td>
+                    <td rowspan="3">ssssss</td>
+                    <td>2H</td>
+                    <td>desdd</td>
+                </tr>
+                <tr>
+                    <td>Licence2</td>
+                    <td>2H</td>
+                    <td>desdd</td>
+                </tr>
+                <tr>
+                    <td>Licence3</td>
+                    <td>2H</td>
+                    <td>desdd</td>
+                </tr>
+                
+            </table>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>copyrigth &copy 2025 Université OpenWorld | Allaye BAMOGO</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page d'accueil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <section class="entete1">
+            <div class="image">
+                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+            </div>
+
+            <!-- <div class="recherche">
+                <label for="rech"> Recherche: </label>
+                <input type="search" id="rech" placeholder="Rechercher...">
+            </div>-->
+             <div class="devise">
+                <p class="devi">L'excellence sans frontieres</p>
+                <p class="excell">🎓</p>
+            </div>
+
+            <div class="heure">
+                <p>Date d'aujourd'hui : <span id="date"></span></p>
+                <p>Heure actuel       : <span id="heur"></span></p>
+            </div>
+           
+        </section>
+        <section class="entete2">
+            <nav autocorrect="on">
+                <ul class="menu">
+                    <li><a class="menuclass" href="index.html" >Accueil</a></li>
+
+                    <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
+
+                    <li><a class="menuclass" href="emploi.html">Emplois du temps</a></li>
+                    <li><a class="menuclasscolor" href="contact.html">Contacts</a></li>
+                </ul>
+
+            </nav>
+        </section>
+
+
+
+    </header>
+
+    <main>
+        <section id="allcontact">
+
+            <article >
+                <h1>CONTACT INFOS</h1>
+                <p>Bienvenue sur le site web de l'Université OpenWorld. Nous sommes très heureux de votre visite.</p>
+            </article>
+
+            <article>
+                <div class="contact">
+                    <div>
+                        <h1 style="text-align: center;">Nous contacter</h1>
+                    </div>
+                        <div class="contacter">
+                            <span><label for="nom">Nom :</label> </span>
+                            <span><input type="text" id="nom" placeholder="Nom et prenom"></span>
+                            <span><label for="mail">Address email :</label> </span>
+                            <span><input type="email" id="mail" placeholder="exemple@domaine.com"></span>
+                            <span><label for="sujet">Sujet :</label> </span>
+                            <span><input type="text" id="sujet" placeholder="Le sujet de votre message"></span>
+                            <span style="grid-template: none;">
+                            
+                        </div>
+                    <div>
+                        <span><label for="mess">Message :</label> </span><br>
+                        <div class="msg"><textarea id="mess" placeholder="Saisisser votre message ici..."></textarea></div>
+                    </div>            
+                    <input id="bsend" type="submit"  value="Envoyer le message">
+                </div>
+            
+             </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>copyrigth &copy 2025 Université OpenWorld | Allaye BAMOGO</p>
+    </footer>
+</body>
+
+</html>

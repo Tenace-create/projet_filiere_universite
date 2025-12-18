@@ -1,0 +1,412 @@
+body{
+    
+    /*background-image:url("../images/photos/livre.jpg");*/
+    background-attachment: fixed;
+    background-size:contain;
+    background-color:white;
+    margin: 1%;
+    
+}
+ 
+section.entete1{
+    display: grid;    
+    grid-template-columns: 1fr 1fr 1fr;/*pour le logo ,devise ,heure et date*/
+    grid-template-rows: 150px;  
+    background-image: url("../images/photos/20170412BandeauFstInfo.jpg");
+    background-position-x: 90%;
+   /* background-color:rgb(243, 243, 243);*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+     
+}
+.image img {
+    width:450px;
+}
+.devise{
+    display:flex;
+    flex-direction: column;
+    font-size: 150%;
+    font-weight:bold;
+    font-style: italic;
+    color: blue;
+    
+}
+.devi{
+    text-align:center;
+     
+}
+/*affichage de la devise */
+.excell{
+    text-align: center;
+    font-size: 260%;
+    position: relative;
+    bottom: 50%;
+    
+}
+.heure{
+    margin: auto;
+    font-weight:bold;
+    color: blue;
+    
+}
+
+div.image{
+padding-left:1%;
+   
+      
+}
+
+
+section.entete2{ 
+    height:auto;
+    background-color:blue;
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+    margin-left: 20%;
+    margin-right: 20%; 
+}
+
+
+.menu{
+    list-style: none;/*pas de puce derriere le lien*/
+    display: flex;/*alignement horizontal*/
+    justify-content: center;   
+    gap: 5%;/*espacement de 5%*/
+    font-size: 30px;/*agrandissement du texte*/
+    font-style: normal;
+    font-weight: bold;
+    
+    
+    
+}
+.menuclass{
+    text-decoration:none;/*pas de soulignement*/
+    color: rgb(227, 226, 182);   
+    
+   }
+
+.menuclasscolor{
+    text-decoration:none;/*pas de soulignement*/
+    color:white;  
+    font-weight: bolder;
+    box-shadow:  5px 5px 5px 5px rgb(0, 0, 0);
+    font-size: 122%;
+    
+    
+}
+
+#contenu_cache {
+        max-height: 0; /*pour redduire l'hauteur du texte a null*/
+        overflow: hidden; /* pour cacher ce qui dépasse */
+        transition: max-height 0.5s ease-in-out; /* Ajout d'une transition de 0,5seconde*/
+}
+
+    /* Cette classe sera ajoutée/retirée par JavaScript */
+#contenu_cache.actif {
+        max-height: 2000px; 
+}
+/* Quand on réduit la fenêtre a 1500pixel*/
+@media (max-width: 1500px) {
+    .menu{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        
+    }
+    section.entete1{
+    display: grid;    
+    grid-template-columns: 3fr 3fr;/*pour le logo ,devise*/    
+    }
+    .heure{
+        display: none;/*pour faire disparaitre la date et l'heure*/
+    }
+   
+   
+
+}
+
+@media(max-width:1000px){
+    
+    .devise{
+        font-size: 100%;
+        font-weight:bold;
+        font-style: italic;
+        color: blue;
+        text-align:center;
+    
+    }
+    /*affichage de la devise */
+    .excell{
+        text-align:center ;
+        font-size: 210%;
+        position: relative;
+        bottom: 20%;
+        
+        }
+}
+
+
+main{
+    
+     background-color: white;
+}
+.presentation {
+    
+    padding: 40px 20px;
+    background-color: white;
+   /* background-image:url("../images/photos/lecture.jpg");*/
+}
+#present{
+    text-align: center;
+}
+.bienvenue{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color:transparent;
+    color: white;
+    border-radius: 5%;/*bordure presque arrondi*/
+    box-shadow: 5px 2px 20px 5px rgb(255, 255, 255);
+    overflow: hidden;/*pour cacher le texte qui sort du cadre*/
+}
+/*defilement du texte*/
+.defile{
+    animation:defiler  15s linear infinite; 
+}
+@keyframes defiler {
+    0%{transform:translateX(100%);}/*%0  au debut le texte se trouve a droite 100%*/
+    100%{transform: translateX(-100%);}   /*a la fin le texte se trouve a gauche*/ 
+}
+
+
+.pre-une-bien{
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url("../images/photos/lecture.jpg");
+    background-position-x: center;
+    
+}
+.pre-une{
+    
+    list-style: none;;/*pas de puce derriere le lien*/
+     text-decoration:none;/*pas de soulignement*/
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.pre,.un{
+     display: inline-block;/*pour separer en bloc*/
+    background-color: yellowgreen;
+    color: blue;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 190%;/*taille du texte*/   
+    text-decoration: none;
+}
+
+.a-la-une {
+    text-align: center;
+    margin: 40px 0;
+}
+.une {
+    background: white;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px lightgray;
+}
+
+.btn {
+    display: inline-block;
+    
+    background:blue;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration:none;
+    font-size: 20px;  
+}
+.btn_at_left{
+    display: flex;
+    
+}
+.image_la_une{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 2%;
+    
+}
+.image_side{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+/*images de transitions*/
+#topho{
+    width: 100%;
+    height: 90%;
+    margin: 20px auto; /* Centrer l'image */
+    overflow: hidden; /* Cacher ce qui dépasse */
+}
+#trans{
+    width: 1000px;
+    height: 1000px;
+    object-fit: cover; /* Assure que l'image couvre bien la zone sans être déformée */
+}
+
+footer {
+
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    background: #003366;
+    color: white;
+    
+}
+/************************************************************************************************/
+/*pour une diminution minimal de la page*/
+@media (max-width: 600px) {
+  .image img {/*diminution de la taille de l'image*/
+         width:200px;
+    }
+    div.recherche{/*changer la position de la barre de recherche*/
+        padding-right:1%;         
+        margin-right:1%;     
+        margin:0%;        
+    }
+    section.entete2{/*changer la position de la barre de menu*/
+    bottom: 75px;
+
+    }
+    .menu{
+        
+        font-size: 20px;/*diminution de la taille  du texte*/
+    }
+    .pre,.un{  
+        border-radius: 8%;
+        padding: 15px 25px;
+        font-size: 100%;/*taille du texte*/   
+    }
+    .excell{
+        text-align:center ;
+        font-size: 160%;
+        position: relative;
+        bottom: 25%;
+        }
+    
+}
+/*___________________----------------------__________________partie enseignant__________________-------------------------_______________________*/
+
+#etitre{
+    text-align: center;
+}
+.triE{
+    text-align: right;
+    font-size: 200%;
+    font-weight: bolder ;
+}
+.cadre{
+    display: flex;
+    flex-wrap:wrap;/*permet de revenir imediatement en colonne s'il n y a plus d'espace pour l'alignement horizontal*/ 
+    background-color: rgb(255, 255, 255);   
+    border-style: double;
+    
+    border-left: 5px;/*enlever la bordure gauche*/
+    border-right: 5px;/*enlever la bordure droite*/     
+    justify-content: center;
+    padding: 1%;
+}
+
+.prof{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;/*4 lignes*/
+    grid-template-columns: 1fr 2fr;/*2 colonnes*/
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgb(162, 162, 162);
+    border-radius: 10%;/*bordures un peut arrondit*/
+    margin: 2%;
+    padding: 2%;
+}
+.attributp{
+    color: blue;
+    background-color: rgb(240, 185, 185);
+}
+.renseign{
+    text-align: center;
+    font-size: small;
+}
+/*___________________----------------------__________________partie filiere__________________-------------------------_______________________*/
+
+div.recherche{
+    font-weight:bolder;
+    text-align:right;
+}
+
+.surligner{
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.filiereJustifie{
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgb(162, 162, 162);
+    margin: 2%;
+    padding: 0%;
+}
+
+.signepar{
+    text-align: right;
+    font-style: oblique;
+    text-decoration: underline;
+}
+.contacter{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 2%;
+    gap: 10%;/*espacement entre les elements*/
+    margin-bottom: 2%;
+
+}
+.contact{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgb(162, 162, 162);
+    border-radius: 5%;
+    padding: 2%;
+    margin: 5%;
+    width:max-content;
+}
+/*pour centrer la zone de texte*/
+.msg{
+     text-align: center;
+}
+/*pour definir la taille de la zone de texte*/
+textarea{   
+    width: 100%;
+    height: 150px;
+}
+#bsend{
+    background-color: rgb(51, 51, 255);
+    padding: 2%;
+    margin-top: 3%;
+    border-radius: 8px;
+    color: white;
+    font-size: 125%;
+    font-weight:500;
+}
+#allcontact{
+    display: flex;
+    flex-wrap:wrap;/*permet de revenir imediatement en colonne s'il n y a plus d'espace pour l'alignement horizontal*/ 
+    background-color: rgb(255, 255, 255);   
+    border-style: double;
+    
+    border-left: 5px;/*enlever la bordure gauche*/
+    border-right: 5px;/*enlever la bordure droite*/     
+    justify-content:space-evenly;
+    padding: 1%;
+}

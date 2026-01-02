@@ -14,13 +14,9 @@
     <header>
         <section class="entete1">
             <div class="image">
-                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+                <a class="logo" href="index.html"><img src="images/logos/logo.jpg" alt="Logo de l'universite"></a>                
             </div>
 
-            <!-- <div class="recherche">
-                <label for="rech"> Recherche: </label>
-                <input type="search" id="rech" placeholder="Rechercher...">
-            </div>-->
              <div class="devise">
                 <p class="devi">L'excellence sans frontieres</p>
                 <p class="excell">🎓</p>
@@ -32,58 +28,56 @@
             </div>
            
         </section>
-        <section class="entete2">
-            <nav>
-                <ul class="menu">
-                    <li><a class="menuclasscolor" href="index.html" >Accueil</a></li>
 
+        <section class="entete2">
+            <div class="burger" id="burg">≡</div>
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a class="menuclasscolor" href="index.html" >Accueil</a></li>
+                    <li><a class="menuclass" href="filieres.html">Filieres</a></li>
                     <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
 
                     <li><a class="menuclass" href="emploi.html">Emplois du temps</a></li>
                     <li><a class="menuclass" href="contact.html">Contacts</a></li>
                 </ul>
-
             </nav>
+            
         </section>
-
+        <button id="btn_mode" class="mode_btn">Mode sombre</button>
 
 
     </header>
 
-    <main>
+    <main class="maine">
         <section class="pre-une-bien">
             <div class="bienvenue">
                  <h1 class="defile" ><span id="salutation"></span>, bienvenue sur le site de l'Université OpenWorld</h1>
             </div>
             
-           
-           
-            <ul class="pre-une">
-                <!-- bouton voir les filieres-->
-                
-                <li  ><a  href="#present" class="pre">Presentation</a></li>
-              <!--  <li  ><a  href="#la-une" class="un">A la une</a></li>-->
+            <ul class="pre-une">                               
+                <li ><a  href="#present" class="pre">Presentation</a></li>
             </ul>
+
              <section class="btn_at_left">
                   <a href="filieres.html" class="btn">Voir les filières</a>
             </section>
         </section>
         <!-- section a la une -->
-        <section class="image_la_une">
-                <div id="trans">
-                    <img id="topho" src="images/photos/inscription.jpg" alt="a la une">
+        <section >             
+                <div class="image_side">                    
+                        <img id="topho" src="images/photos/inscription.jpg" alt="a la une">                    
+                    <div >
+                        <div class="ceremonie">                           
+                            <p class="text_dans_img">Les etudiants des 8<sup>e</sup>, 9<sup>e</sup> et 10<sup>e</sup> promotions du Master 2 en Developpement logiciels ont recu ce Jeudi 15 Janvier 2026 leur attestations de fin de formation au cours d'une ceremonie officielle</p>
+                        </div>  
+                        <img width="100%" style="margin-top: 2%;" src="images/photos/etudiant.jpg">                        
+                        <figcaption  style="text-align: center;font-size: 130%;">Formation speciale de tout les etudiants en marketing<br><br><br><br><br><br><br><br></figcaption>                                             
+                    </div>                                       
                 </div>
-                
-                <div class="image_side">
-                    <img width="100%" style="margin-bottom: 5%;" src="images/photos/etudiant.jpg">
-                    <img width="100%" src="images/photos/doctorants.jpeg"> 
+                <div class="fmeebo">
+                    <img width="100%" src="images/photos/fasomebo.png">
                 </div>
-            
-            
-           
-                 
-            <img width="60%" src="images/photos/fasomebo.png">
-
+   
         </section>
         <!-- section presentation -->
         <section class="presentation">
@@ -121,32 +115,26 @@
                     Nous offrons des diplômes de Licence, Master, et Doctorat qui sont reconnus à l'échelle nationale et internationale.
                    
                     Nous préparons nos diplômés pour une carrière mondiale grâce à nos partenariats avec plus de 20 universités dans le monde y compris :
-                    <ul>
+                    <ul id="lien_autre_univ">
                         <li><a href="https://www.uts.bf">L'Université THOMAS SANKARA;</a>  </li>
                         <li><a href="https://www.ujkz.bf">L'Université JOSEPH KI ZERBO;</a></li>
                         <li><a href="https://web.mit.edu">Massachusetts Institute of Technology;</a></li>
                         <li><a href="https://www.harvard.edu">Harvard University</a></li>
-                    </u>     
-                    Si vous êtes intéressé par l'informatique , l'Université OpenWorld vous offrira l'environnement et les outils nécessaires pour atteindre vos plus grandes ambitions.
-                    OpenWorld est situé a Ouagadougou(BURKINA FASO) en afrique de l'ouest.
+                    </ul>     
+                    Si vous êtes intéressé par l'informatique , l'Université OpenWorld vous offrira l'environnement et les outils nécessaires pour atteindre vos plus grandes ambitions.<br>
+                    OpenWorld est situé a Ouagadougou(BURKINA FASO) en afrique de l'ouest.<br><br>
 
-                    OpenWorld l'excellence sans frontière.
-                    Contacter OpenWorld
+                    <cite style="padding-left: 40%;color: green;">OpenWorld l'excellence sans frontière.</cite><br><br>
+                    <span style="font-size: 25px;">✆</span>
+                    <a href="contact.html">Contacter OpenWorld</a></li>
+                    
                     </p>
                    
                 </div>
-                <button id="btn_voir_plus" onclick="ContenuVP()">Voir plus</button>
+                <button class="btn" id="btn_voir_plus" onclick="ContenuVP()">Voir plus</button>
             </p>
         </section>
-        <!-- section a la une -->
-        <section class="a-la-une">
-            <h2 id="la-une">À la une</h2>
-            <article class="une">
-                <h3>Inscriptions ouvertes pour 2025</h3>
-                <p>Rejoignez nos programmes de Licence et Master en Informatique.</p>
-            </article>
-        </section>
-        
+      
     </main>
 
     <footer>

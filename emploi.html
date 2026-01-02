@@ -5,7 +5,7 @@
     <title>Page d'accueil</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,13 +14,9 @@
     <header>
         <section class="entete1">
             <div class="image">
-                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+                <a class="logo" href="index.html"><img src="images/logos/logo.jpg" alt="Logo de l'universite"></a> 
             </div>
 
-            <!-- <div class="recherche">
-                <label for="rech"> Recherche: </label>
-                <input type="search" id="rech" placeholder="Taper un mot-cle">
-            </div>-->
              <div class="devise">
                 <p class="devi">L'excellence sans frontieres</p>
                 <p class="excell">🎓</p>
@@ -33,10 +29,11 @@
            
         </section>
         <section class="entete2">
-            <nav autocorrect="on">
-                <ul class="menu">
+            <div class="burger" id="burg">≡</div>
+            <nav>
+                <ul class="menu" id="menu">
                     <li><a class="menuclass" href="index.html" >Accueil</a></li>
-
+                    <li><a class="menuclass" href="filieres.html">Filieres</a></li>
                     <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
 
                     <li><a class="menuclasscolor" href="emploi.html">Emplois du temps</a></li>
@@ -45,16 +42,16 @@
 
             </nav>
         </section>
-
+        <button id="btn_mode" class="mode_btn">Mode sombre</button>
 
 
     </header>
 
-    <main>
+    <main class="maine">
       <h1 id="etitre">Les emplois du temps de nos filieres</h1>
         <hr><!--ligne horizontale-->
-        <section class="triE">
-            <label for="trie"></label>        
+        <section class="triEm">
+            <label for="trie">Filtrer:</label>        
             <select name="trie" id="trie">
                 
                     <option value="Tous">Tout les cours</option>
@@ -63,48 +60,48 @@
             
             </select>
         </section>
-        <section class="cadre" id="a_filtrer">
+        <section class="cadreEmp" id="a_filtrer">
                 <div>
-                    <table class="filiereJustifie" border="2" width="100%" >
-                    <caption>Emploi du temps de la semaine du 12 janvier au 17 janvier 2026 <br> (3eme anneé) L3/S6 OPTION : reseau</caption>
-                    <tr>
-                        <th>Lundi</th>
-                        <th>Mardi</th>
-                        <th>Mercredi</th>
-                        <th>Jeudi</th>
-                        <th>Vendredi</th>
-                        <th>Samedi</th>
-                    </tr>
-                    <tr class="matin_temp">
-                        <td colspan="6" align="middle">Matin : 8h - 12h</td>
-                    </tr>
-                    <tr class="matin">
-                        <td>cours1</td>
-                        <td>cours2</td>
-                        <td>cours3</td>
-                        <td></td>
-                        <td>cours5</td>
-                        <td>cours6</td>
-                    </tr>
-                    <tr class="midi_temp">
-                        <td colspan="6" align="middle">Après midi : 13h30 - 17h30</td>
-                    </tr>
-                    <tr class="midi">
-                        <td>cours1</td>
-                        <td></td>
-                        <td>cours3</td>
-                        <td>cours4</td>
-                        <td>cours5</td>
-                        <td>cours6</td>
-                    </tr>
-        
-                    
-                </table>
+                    <table class="emploisJustifie" border="2" >
+                        <caption>Emploi du temps de la semaine du 12 janvier au 17 janvier 2026 <br> (3eme anneé) L3/S6 OPTION : reseau</caption>
+                        <thead>
+                            <tr>
+                                <th>Lundi</th>
+                                <th>Mardi</th>
+                                <th>Mercredi</th>
+                                <th>Jeudi</th>
+                                <th>Vendredi</th>
+                                <th>Samedi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="matin_temp">
+                                <td colspan="6" align="center">Matin : 8h - 12h</td>
+                            </tr>
+                            <tr class="matin">
+                                <td>Cours de Programmation Web et Framework<br>Drs Olivier DABIRÉ <br>(4/32)</td>
+                                <td></td>
+                                <td> Cours de Programmation Java <br> Drs Théodore DAMA<br>(28/32)</td>
+                                <td>Cours Programmation Web et Framework<br>Drs Olivier DABIRÉ <br>(12/32)</td>
+                                <td>Cours Programmation Web et Framework<br>Drs Olivier DABIRÉ <br>(20/32)</td>
+                                <td>TP Programmation Web et Framework<br>Drs Olivier DABIRÉ <br>(24/32)</td>
+                            </tr>
+                            <tr class="midi_temp">
+                                <td colspan="6" align="middle">Après midi : 13h30 - 17h30</td>
+                            </tr>
+                            <tr class="midi">
+                                <td>Cours de Programmation Web et Framework<br>Drs Olivier DABIRÉ <br>(8/32)</td>
+                                <td>Devoir de concepts de la programmation orientée objet</td>
+                                <td> Cours de Programmation Java <br> Drs Théodore DAMA<br>(32/32)</td>
+                                <td>cours de Programmation Web et Framework<br>Drs Olivier DABIRÉ <br>(16/32)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>                    
+                    </table>
                     <p">NB:Sous resérve d'un réaménagement à convenir avec l'Enseignant.<br></p>
                     <p class="signepar">PrBouriema Zerbo/Directeur Adjoint</p>
-            </div>
-            
-            
+                </div>            
         </section>
     </main>
 

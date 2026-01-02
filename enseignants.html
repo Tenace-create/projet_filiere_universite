@@ -5,7 +5,7 @@
     <title>Page d'accueil</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,13 +14,9 @@
     <header>
         <section class="entete1">
             <div class="image">
-                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+                <a class="logo" href="index.html"><img src="images/logos/logo.jpg" alt="Logo de l'universite"></a> 
             </div>
 
-            <!-- <div class="recherche">
-                <label for="rech"> Recherche: </label>
-                <input type="search" id="rech" placeholder="Rechercher...">
-            </div>-->
              <div class="devise">
                 <p class="devi">L'excellence sans frontieres</p>
                 <p class="excell">🎓</p>
@@ -33,10 +29,11 @@
            
         </section>
         <section class="entete2">
-            <nav autocorrect="on">
-                <ul class="menu">
+            <div class="burger" id="burg">≡</div>
+            <nav>
+                <ul class="menu" id="menu">
                     <li><a class="menuclass" href="index.html" >Accueil</a></li>
-
+                    <li><a class="menuclass" href="filieres.html">Filieres</a></li>
                     <li><a class="menuclasscolor" href="enseignants.html">Enseignants</a></li>
 
                     <li><a class="menuclass" href="emploi.html">Emplois du temps</a></li>
@@ -45,85 +42,160 @@
 
             </nav>
         </section>
-
+        <button id="btn_mode" class="mode_btn">Mode sombre</button>
     </header>
-    <main>
+    <main class="maine">
         <h1 id="etitre">Nos Enseignants</h1>
         <hr><!--ligne horizontale-->
         <!--section de trie-->
         <section class="triE">
-            <label for="trier">Filtrer par :</label>        
-            <select name="trie" id="trier">
-                <option value="tous :">Tous les professeurs</option>
-                <optgroup label="Matiere :">
-                    <option value="anglais">Anglais</option>
-                    <option value="cybersecurite">Cybersécurité</option>
-                    <option value="programmation">Programmation</option>
-                    <option value="systeme">Systeme informatique</option>
-                    <option value="reseau">Reseau</option>
-                    <option value="donnee">Base de donneé</option>
-                    <option value="algebre">Algebre</option>
-                    <option value="analyse">Analyse</option>
-                    
-                </optgroup>
-                <optgroup label="Grade :">
-                    <option value="Professeur Titulaire">Maitre de conferences</option>
-                    <option value="Assistant">Professeur titulaire</option>                   
-                    <option value="Maitre de conferences">Assistant</option>
-                    <option value="Maitre de conferences">Professeur associé</option>
-                    <option value="Maitre de conferences">Vacataire</option>
-                   
-                </optgroup>
-            </select>
+            <div>
+                <label for="trierm">Filtrer par matières</label>        
+                <select id="trierm">
+                    <option value="tous">Tous les matières</option>                
+                    <option value="Anglais">Anglais</option>
+                    <option value="Cybersécurité">Cybersécurité</option>
+                    <option value="Programmation">Programmation</option>
+                    <option value="Systeme informatique">Systeme informatique</option>
+                    <option value="Reseau">Reseau</option>
+                    <option value="Base de donneé">Base de donneé</option>
+                    <option value="Algebre">Algebre</option>
+                    <option value="Analyse">Analyse</option>
+                </select> 
+            </div>
+            <div>
+                <label for="trierg">Filtrer par grade</label>        
+                <select id="trierg">
+                    <option value="tous">Tous les grades</option>
+                    <option value="Maitre de conferences">Maitre de conferences</option>
+                    <option value="Professeur titulaire">Professeur titulaire</option>                   
+                    <option value="Assistant">Assistant</option>
+                    <option value="Professeur associé">Professeur associé</option>
+                    <option value="Vacataire">Vacataire</option>                   
+                </select>
+            </div>
+                           
         </section>
         
+        <section class="cadre">            
+            <div class="prof" data-matiere="Analyse" data-grade="Professeur associé" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr Ibrahim KONATÉ</p>
+                <p class="infProf"><strong>grade :</strong>Professeur associé</p>
+                <p class="infProf"><strong>Matieres :</strong>Analyse</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">ibrahimkonate@gmail.com</span></p>           
+            </div>
 
-        <section class="cadre">
+            <div class="prof" data-matiere="Programmation" data-grade="Professeur titulaire" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Drs Olivier DABIRÉ</p>
+                <p class="infProf"><strong>grade :</strong>Professeur titulaire</p>
+                <p class="infProf"><strong>Matieres :</strong>Programmation</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">olivier.dabire@ujkz.bf</span></p>           
+            </div>
+
+            <div class="prof" data-matiere="Programmation" data-grade="Professeur titulaire" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr Gouayon KOALA</p>
+                <p class="infProf"><strong>grade :</strong>Professeur titulaire</p>
+                <p class="infProf"><strong>Matieres :</strong>Programmation</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">gouayonkoala1@gmail.com</span></p>           
+            </div>
+
+            <div class="prof" data-matiere="Base de donneé" data-grade="Professeur associé" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr Yacouba Kyelem</p>
+                <p class="infProf"><strong>grade :</strong>Professeur associé</p>
+                <p class="infProf"><strong>Matieres :</strong>Base de donneé</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">yacoubakyelem@gmail.com</span></p>           
+            </div>
             
-            <div class="prof">
-                <span>Nom :</span>
-                <span>Pr.BAMOGO</span>
-                <span>grade :</span>
-                <span>professeur titulaire</span>
-                <span>Matieres :</span>
-                <span>cybersécurité<br>reseau<br>administration reseau</span>
-                <span>Email :</span>
-                <span>bamogoallaye@gmail.com</span>
-
+            <div class="prof" data-matiere="Analyse" data-grade="Professeur associé" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr OUEDRAOGO P. O. Fabrice</p>
+                <p class="infProf"><strong>grade :</strong>Professeur associé</p>
+                <p class="infProf"><strong>Matieres :</strong>Analyse</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">ouedraogofabrice@gmail.com</span></p>           
             </div>
-            <div class="prof">
-                <span>Nom :</span>
-                <span>Pr.BAMOGO</span>
-                <span>grade :</span>
-                <span>professeur titulaire</span>
-                <span>Matieres :</span>
-                <span class="attributp">cybersécurité<br>reseau<br>administration reseau</span>
-                <span>Email :</span>
-                <span>bamogoallaye78@gmail.com</span>
 
+            <div class="prof" data-matiere="Systeme informatique Cybersécurité" data-grade="Professeur titulaire" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>M. Theodore DAMA</p>
+                <p class="infProf"><strong>grade :</strong>Professeur titulaire</p>
+                <p class="infProf"><strong>Matieres :</strong>Systeme informatique<br>Cybersécurité</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">damatheo8@gmail.com</span></p>
             </div>
-            <div class="prof">
-                <span>Nom :</span>
-                <span>Pr.BAMOGO</span>
-                <span>grade :</span>
-                <span>professeur titulaire</span>
-                <span>Matieres :</span>
-                <span>cybersécurité<br>reseau<br>administration reseau</span>
-                <span>Email :</span>
-                <span>bamogoallaye78@gmail.com</span>
 
+            <div class="prof" data-matiere="Systeme informatique Reseau" data-grade="Professeur associé" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Drs Salifou OUEDRAOGO</p>
+                <p class="infProf"><strong>grade :</strong>Professeur associé</p>
+                <p class="infProf"><strong>Matieres :</strong>Systeme informatique<br>Reseau</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">ouedraogosalifou@gmail.com</span></p>           
             </div>
-            <div class="prof">
-                <span>Nom :</span>
-                <span>Pr.BAMOGO</span>
-                <span>grade :</span>
-                <span>professeur titulaire</span>
-                <span>Matieres :</span>
-                <span>cybersécurité<br>reseau<br>administration reseau</span>
-                <span>Email :</span>
-                <span>bamogoallaye78@gmail.com</span>
 
+            <div class="prof" data-matiere="Systeme informatique Cybersécurité" data-grade="Professeur titulaire" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>M. Assane ILBOUDO</p>
+                <p class="infProf"><strong>grade :</strong>Professeur titulaire</p>
+                <p class="infProf"><strong>Matieres :</strong>Systeme informatique<br>Cybersécurité</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">damatheo8@gmail.com</span></p>           
             </div>
+
+            <div class="prof" data-matiere="Algebre" data-grade="Professeur associé" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr Moussa DAMA</p>
+                <p class="infProf"><strong>grade :</strong>Professeur associé</p>
+                <p class="infProf"><strong>Matieres :</strong>Algebre</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">damamoussa@gmail.com</span></p>           
+            </div>
+
+            <div class="prof" data-matiere="Algebre" data-grade="Maitre de conferences" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Pr Patricia ZOUNGRANA</p>
+                <p class="infProf"><strong>grade :</strong>Maitre de conferences</p>
+                <p class="infProf"><strong>Matieres :</strong>Algebre</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">zoungranap@gmail.com</span></p>           
+            </div>
+
+            <div class="prof" data-matiere="Programmation" data-grade="Maitre de conferences" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Pr Bouriema ZERBO</p>
+                <p class="infProf"><strong>grade :</strong>Maitre de conferences</p>
+                <p class="infProf"><strong>Matieres :</strong>Programmation</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">bouriemazerbo@gmail.com</span></p>           
+            </div>
+
+            <div class="prof" data-matiere="Reseau Base de donneé" data-grade="Professeur titulaire" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr Allaye BAMOGO</p>
+                <p class="infProf"><strong>grade :</strong>Professeur titulaire</p>
+                <p class="infProf"><strong>Matieres :</strong>Reseau<br>Base de donneé</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">bamogoallaye87@gmail.com</span></p>           
+            </div>
+            <div class="prof" data-matiere="Anglais" data-grade="Professeur titulaire" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr Celeste BAKOUAN</p>
+                <p class="infProf"><strong>grade :</strong>Professeur titulaire</p>
+                <p class="infProf"><strong>Matieres :</strong>Anglais</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">bakouanceleste@gmail.com</span></p>           
+            </div>
+            <div class="prof" data-matiere="Analyse" data-grade="Assistant" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong> Damien TRAORÉ</p>
+                <p class="infProf"><strong>grade :</strong>Assistant</p>
+                <p class="infProf"><strong>Matieres :</strong>Analyse</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">damientraore@gmail.com</span></p>           
+            </div>
+            <div class="prof" data-matiere="Base de donneé" data-grade="Vacataire" >
+                <p><img class="imgProf" src="images/photos/enseignant.jpg" alt="chargement ..."></p>               
+                <p class="infProf"><strong>Nom :</strong>Dr Augustin BANGRÉ</p>
+                <p class="infProf"><strong>grade :</strong>Vacataire</p>
+                <p class="infProf"><strong>Matieres :</strong>Base de donneé</p>
+                <p class="infProf"><strong>Email :</strong><span style="font-style: oblique;">bangreaugustin@gmail.com</span></p>           
+            </div>
+            
+            
         </section>
         <br>
         <p class="renseign">Veuiller nous contacter pour plus de renseignement !!!</p>

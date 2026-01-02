@@ -5,7 +5,7 @@
     <title>Page d'accueil</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,13 +14,9 @@
     <header>
         <section class="entete1">
             <div class="image">
-                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+                <a class="logo" href="index.html"><img src="images/logos/logo.jpg" alt="Logo de l'universite"></a> 
             </div>
 
-            <!-- <div class="recherche">
-                <label for="rech"> Recherche: </label>
-                <input type="search" id="rech" placeholder="Rechercher...">
-            </div>-->
              <div class="devise">
                 <p class="devi">L'excellence sans frontieres</p>
                 <p class="excell">🎓</p>
@@ -33,10 +29,11 @@
            
         </section>
         <section class="entete2">
-            <nav autocorrect="on">
-                <ul class="menu">
+            <div class="burger" id="burg">≡</div>
+            <nav>
+                <ul class="menu" id="menu">
                     <li><a class="menuclass" href="index.html" >Accueil</a></li>
-
+                    <li><a class="menuclass" href="filieres.html">Filieres</a></li>
                     <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
 
                     <li><a class="menuclass" href="emploi.html">Emplois du temps</a></li>
@@ -45,40 +42,62 @@
 
             </nav>
         </section>
-
+        <button id="btn_mode" class="mode_btn">Mode sombre</button>
 
 
     </header>
 
     <main>
-        <section id="allcontact">
+        
+        <section  id="allcontact">
 
-            <article >
+            <article class="maine" >
                 <h1>CONTACT INFOS</h1>
                 <p>Bienvenue sur le site web de l'Université OpenWorld. Nous sommes très heureux de votre visite.</p>
+                <br><hr>
+               
+                <ul class="contact_ordonne">
+                    <li >Telephone:<br>(+226)02034752</li>
+                    <li >Email:<br> <address>contact@openworld.bf</address> </li>
+                </ul>
+                <br><hr>
+                <ul >
+                    <li>Adresse:<br>Region du centre ,Province du Kadiogo, Commune de Ouagadougou</li>
+                </ul>
+                <br><hr>
             </article>
 
             <article>
-                <div class="contact">
-                    <div>
-                        <h1 style="text-align: center;">Nous contacter</h1>
-                    </div>
+                <form id="fcontact" >
+                    <div class="contact">
+                        <div>
+                             <h1 style="text-align: center;">Nous contacter</h1>
+                        </div>
                         <div class="contacter">
                             <span><label for="nom">Nom :</label> </span>
                             <span><input type="text" id="nom" placeholder="Nom et prenom"></span>
+                            
                             <span><label for="mail">Address email :</label> </span>
                             <span><input type="email" id="mail" placeholder="exemple@domaine.com"></span>
                             <span><label for="sujet">Sujet :</label> </span>
                             <span><input type="text" id="sujet" placeholder="Le sujet de votre message"></span>
+                            
                             <span style="grid-template: none;">
                             
                         </div>
-                    <div>
-                        <span><label for="mess">Message :</label> </span><br>
-                        <div class="msg"><textarea id="mess" placeholder="Saisisser votre message ici..."></textarea></div>
-                    </div>            
-                    <input id="bsend" type="submit"  value="Envoyer le message">
-                </div>
+                        <div>
+                            <span><label for="mess">Message :</label> </span><br>
+                            <div class="msg"><textarea id="mess" placeholder="Saisisser votre message ici..."></textarea></div>
+                            
+                        </div>            
+                        <input id="bsend" type="submit"  value="Envoyer le message">
+                    </div>
+                    <p id="erreur_nom"></p>
+                    <p id="erreur_sujet"></p>
+                    <p id="erreur_msg"></p>
+                    <p id="erreur"></p>
+                    <p id="succes"></p>
+                </form>
             
              </article>
         </section>

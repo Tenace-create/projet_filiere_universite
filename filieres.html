@@ -5,7 +5,7 @@
     <title>Page d'accueil</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,7 +14,7 @@
     <header>
         <section class="entete1">
             <div class="image">
-                <img src="images/logos/logo.jpg" alt="Logo de l'universite">
+                <a class="logo" href="index.html"><img src="images/logos/logo.jpg" alt="Logo de l'universite"></a> 
             </div>
 
             <div class="devise">
@@ -29,10 +29,11 @@
            
         </section>
         <section class="entete2">
-            <nav autocorrect="on">
-                <ul class="menu">
+            <div class="burger" id="burg">≡</div>
+            <nav>
+                <ul class="menu" id="menu">
                     <li><a class="menuclass" href="index.html" >Accueil</a></li>
-
+                    <li><a class="menuclasscolor" href="filieres.html">Filieres</a></li>
                     <li><a class="menuclass" href="enseignants.html">Enseignants</a></li>
 
                     <li><a class="menuclass" href="emploi.html">Emplois du temps</a></li>
@@ -41,68 +42,360 @@
 
             </nav>
         </section>
+        <button id="btn_mode" class="mode_btn">Mode sombre</button>
     </header>
 
-    <main>
+    <main class="maine">
         <h1 id="etitre">Nos filieres</h1>
         <hr><!--ligne horizontale-->
         <div class="recherche">
                 <label for="rech"> Recherche: </label>
+                <span class="icone">🔍</span>
                 <input type="text" id="rech" placeholder="Taper un mot-cle">
         </div>
         <section class="cadre" id="champ">
-            <table class="filiereJustifie" border="2" width="25%" >
-                <caption>Developpement logiciel</caption>
-                <tr>
-                    <th>Niveau</th>
-                    <th>Description</th>
-                    <th>Dureé</th>
-                    <th>Deboucheé</th>
-                </tr>
-                <tr>
-                    <td>Licence1</td>
-                    <td rowspan="3">Cette filière forme les etudiants a être capable de concevoir, developper et deployer des logiciels et applications .Son objectif est de former de architectes et des developpeurs capables de gérer le cycle de vie complet d'un logiciel complexe, du besoin initial à la maintenance.</td>
-                    <td>2H</td>
-                    <td>desdd</td>
-                </tr>
-                <tr>
-                    <td>Licence2</td>
-                    <td>2H</td>
-                    <td>desdd</td>
-                </tr>
-                <tr>
-                    <td>Licence3</td>
-                    <td>2H</td>
-                    <td>desdd</td>
-                </tr>
-                
+            <table class="filiereJustifie" border="2">
+                <caption>Licence en Developpement logiciel</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Debouchés</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="licence">
+                        <td>Licence1</td>
+                        <td>Dans cette partie du développement logiciel, les etudiants apprendrons les bases de l'informatique, les algorithmes, les mathématiques et des introductions a la programmation.</td>
+                        <td>9 mois</td>
+                        <td>Assistant développeur ;<br>Gestion de maintenance ;<br>Poursuit en <strong>Licence 2 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence2</td>
+                        <td >L'apprentissage de la programmation avanceé ,la programmation orienté objet (POO), les bases de donneés, structure de données et le developpement web.</td>
+                        <td>9 mois</td>
+                        <td>developpeur junior; <br>Technichien informatique ;<br>Poursuit en <strong>Licence 3 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence3</td>
+                        <td>Formation complète en conception, framework, développement et déploiement d'applications et logiciel et enfin un suivit de stage.</td>
+                        <td>9 mois</td>
+                        <td>Développeur web / mobile;<br>Programmeur d'applications ;<br>Ingenieur logiciels;<br>Testeur logiciel ;<br>Poursuit en <strong>Master Génie Logiciel.</strong></td>
+                    </tr>
+                </tbody>
+                                
             </table>
 
-             <table class="filiereJustifie" border="2" width="25%" >
-                <caption>Licence en reseau</caption>
-                <tr>
-                    <th>Niveau</th>
-                    <th>Description</th>
-                    <th>Dureé</th>
-                    <th>Deboucheé</th>
-                </tr>
-                <tr>
-                    <td>Licence1</td>
-                    <td rowspan="3">ssssss</td>
-                    <td>2H</td>
-                    <td>desdd</td>
-                </tr>
-                <tr>
-                    <td>Licence2</td>
-                    <td>2H</td>
-                    <td>desdd</td>
-                </tr>
-                <tr>
-                    <td>Licence3</td>
-                    <td>2H</td>
-                    <td>desdd</td>
-                </tr>
+             <table class="filiereJustifie" border="2" >
+                <caption> Licence en Réseau et systèmes</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="licence">
+                        <td>Licence1</td>
+                        <td>Apprentissage des base réseaux , systemes informatiques et informatique générale.</td>
+                        <td>9 mois</td>
+                        <td>Technichien informatique;<br>Assistant réseau;<br>Poursuit en <strong>Licence 2 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence2</td>
+                        <td>Formation en administration réseau et systeme, et réseau avancés.</td>
+                        <td>9 mois</td>
+                        <td>Administrateur système junior;<br>Technichien réseau;<br>Poursuit en <strong>Licence 3 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence3</td>
+                        <td> Formation en ingénierie réseau, virtualisation ,cloud , Sécurité  réseau , systèmes avancés et un suivit de stage.</td>
+                        <td>9mois</td>
+                        <td>Administrateur réseau / systèmes;<br>Ingenieur systèmes;<br>Analyse sécurité;<br>Poursuit en <strong>Master Réseaux et Télecoms ou systèmes.</strong></td>
+                    </tr>
+                </tbody>
                 
+            </table>
+            <table class="filiereJustifie" border="2" >
+                <caption>Licence en Cybersécurité</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="licence">
+                        <td>Licence1</td>
+                        <td>Dans cette section de la cybersécurité , vous apprendrez les mathematiques, les bases de l'informatiques, des réseaux et des systèmes</td>
+                        <td>9 mois</td>
+                        <td>Assistant informatique ;<br>Poursuit en <strong>Licence 2 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence2</td>
+                        <td>Enseignements en sécurité réseau , cryptographie et systèmes <strong>Linux</strong></td>
+                        <td>9 mois</td>
+                        <td>Assistant sécurité;<br>Technicien réseau;<br>Poursuit en <strong>Licence 3 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence3</td>
+                        <td>Formation en tests d'intrusion, audit de sécurité puis un stage.</td>
+                        <td>9mois</td>
+                        <td>Administrateur sécurité;<br>Pentester (hacker éthique) ;<br>analyste SOC;<br>Analyste en cybersécurité;<br>Poursuit en ;<strong>Master Cybersécurité .</strong></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <table class="filiereJustifie" border="2" >
+                <caption>Licence en Data Science et Intelligence Artificielle</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="licence">
+                        <td>Licence1</td>
+                        <td>Dans cette section de la Data Science et Intelligence Artificielle , vous apprendrez les mathematiques, les mathematiques , les algorithmes et l'informatique de base</td>
+                        <td>9 mois</td>
+                        <td>Assistant informatique ;<br>Poursuit en <strong>Licence 2 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence2</td>
+                        <td>Enseignements en statistique , programmation data et bases de données.</td>
+                        <td>9 mois</td>
+                        <td>Assistant data analyst;<br>Technichien data;<br>Poursuit en <strong>Licence 3 .</strong></td>
+                    </tr>
+                    <tr class="licence">
+                        <td>Licence3</td>
+                        <td>Formation en machine learning , projet IA et un suivit de stage.</td>
+                        <td>9mois</td>
+                        <td>Data analyst junior;<br>Assistant data scientist ;<br>developpeur IA junior;<br>Analyste décisionnel ;<br>Poursuit en <strong>Master Data Science et Intelligence Artificielle.</strong></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <table class="filiereJustifie" border="2" >
+                <caption>Master en Génie Logiciel</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="master">
+                        <td>Master1</td>
+                        <td>Formation en conception logicielles avancée, architectures logicielles, en base de données avancées et Programmation Orienté Objet (POO) avancée.</td>
+                        <td>9 mois</td>
+                        <td>Ingenieur logiciel junior ;<br>chef d'équipe technique <br>Poursuit en <strong>Master 2 </strong></td>
+                    </tr>
+                    <tr class="master">
+                        <td>Master2</td>
+                        <td>Formation en microservices , cloud , DevOps et un projet industriel plus stage.</td>
+                        <td>9 mois</td>
+                        <td>Ingénieur logiciel;<br>Architecte logiciel junior;<br>Lead developpeur;<br>DevOps engineer;<br>Chef de projet technique;<br><strong>Doctorat (Recherche).</strong></td>
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+             <table class="filiereJustifie" border="2" >
+                <caption>Master en Cybersécurité</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="master">
+                        <td>Master1</td>
+                        <td>Formation en conception sécurité systèmes et réseaux , cryptographie et sécurité web.</td>
+                        <td>9 mois</td>
+                        <td>Analyste SOC junior; <br>Consultant en sécurité junior;<br><br>Poursuit en <strong>Master 2 .</strong></td>
+                    </tr>
+                    <tr class="master">
+                        <td>Master2</td>
+                        <td>Formation en audit de sécurité ,SOC ,cyberdéfense et  plus stage long.</td>
+                        <td>9 mois</td>
+                        <td>Ingénieur cybersécurité ;<br>Pentester senior;<br>Analyste SOC;<br>Consultant en sécurité;<br><strong>Doctorat en sécurité informatique.</strong></td>
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+             <table class="filiereJustifie" border="2" >
+                <caption>Master en Réseau et systèmes</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="master">
+                        <td>Master1</td>
+                        <td>Formation en réseaux avancés et systèmes distribués.</td>
+                        <td>9 mois</td>
+                        <td>Ingenieur réseau junior;<br>Ingenieur système junior;<br>Poursuit en <strong>Master 2 .</strong></td>
+                    </tr>
+                    <tr class="master">
+                        <td>Master2</td>
+                        <td>Formation en cloud computing, data centers et  un stage professionel.</td>
+                        <td>9 mois</td>
+                        <td>Ingénieur réseau / systèmes;<br>Cloud engineer;<br>Administrateur systèmes senior;<br>Architecte des infrastructures ;<br><strong>Doctorat en réseaux.</strong></td>
+                    </tr>
+                    
+                </tbody>                
+            </table>
+
+            <table class="filiereJustifie" border="2" >
+                <caption>Master en Data science et Intelligence Artificielle</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="master">
+                        <td>Master1</td>
+                        <td>Formation en statistiques avancées , Machine Learning (ML) et data engineering.</td>
+                        <td>9 mois</td>
+                        <td>Data scientist junior;<br>Machine learning engineer;<br>Poursuit en <strong>Master 2 .</strong></td>
+                    </tr>
+                    <tr class="master">
+                        <td>Master2</td>
+                        <td>Formation deep learning, projet IA et un stage en entreprise ou laboratoire.</td>
+                        <td>9 mois</td>
+                        <td>Data scientist;<br>Ingenieur IA;<br>Machine learning engineer;<br>Data engineer;<br><strong>Doctorat en IA / Data Science.</strong></td>
+                    </tr>
+                    
+                </tbody>                
+            </table>
+
+            <table class="filiereJustifie" border="2" >
+                <caption>Doctorat en Génie logiciel</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="doctorat">
+                        <td>Dotorat1</td>
+                        <td>Définition du sujet de thèse , Revue bibliographique approfondie , Methodologie de recherche , Premiers prototypes ou modèles.</td>
+                        <td>9 mois</td>
+                        <td>Chercher junior;<br>Ingenieur;<br>Poursuit en <strong>Doctorat 2 .</strong></td>
+                    </tr>
+                    <tr class="doctorat">
+                        <td>Doctorat2</td>
+                        <td>développement en solution innovantes ,Experimentations avancées , Publications scientifiques ,validation partielle des resultats.</td>
+                        <td>9 mois</td>
+                        <td>Chercher en Génie logiciel;<br>Enseignant chercheur;<br>consultant haut niveau;<br>Architecte logiciel senior; <br>Expert logiciel.</td>
+                    </tr>
+                    
+                </tbody>                
+            </table>
+
+            <table class="filiereJustifie" border="2" >
+                <caption>Doctorat en Cybersécurité</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="doctorat">
+                        <td>Dotorat1</td>
+                        <td>Analyse approfondie des menaces, etude de l'état de l'art , definition du cadre experimental , Premiers algorithmes de sécurité.</td>
+                        <td>9 mois</td>
+                        <td>chercheur cyber junior;<br>Ingenieur sécurité:<br>Poursuit en <strong>Doctorat 2 .</strong></td>
+                    </tr>
+                    <tr class="doctorat">
+                        <td>Doctorat2</td>
+                        <td>conception de nouveau mécanismes de défences , simulations et tests d'attaques , Publications scientifiques ,colaborations industriel.</td>
+                        <td>9 mois</td>
+                        <td>Chercher en cybersécurité ;<br>Expert cyberdéfense ;<br>Ingenieur sécurité;<br>Consultant en securité strategique ;<br>Enseignant chercheur.</td>
+                    </tr>
+                    
+                </tbody>                
+            </table>
+
+            <table class="filiereJustifie" border="2" >
+                <caption>Doctorat en Réseau et Systèmes</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="doctorat">
+                        <td>Dotorat1</td>
+                        <td>Etude approfondie des architectures existantes, modelisation réseau , definition des hypothèses de recherche.</td>
+                        <td>9 mois</td>
+                        <td>chercheur reseau junior <br>Ingenieur réseau;<br>Poursuit en <strong>Doctorat 3 .</strong></td>
+                    </tr>
+                    <tr class="doctorat">
+                        <td>Doctorat2</td>
+                        <td>Developpement de nouvelles architectures , simulations et déploiements experimentaux , Publications et conferences , Optimisation et validation.</td>
+                        <td>9 mois</td>
+                        <td>Chercher en réseaux;<br>Expert cloud et infrastructures ;<br>Ingenieur réseau;<br>Consultant telecoms ;<br>Enseignant chercheur.</td>
+                    </tr>
+                    
+                </tbody>                
+            </table>
+            <table class="filiereJustifie" border="2" >
+                <caption>Doctorat en Data science et Intelligence Artificielle</caption>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Description</th>
+                        <th>Dureé</th>
+                        <th>Deboucheé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="doctorat">
+                        <td>Dotorat1</td>
+                        <td> Revue scientifique intensive, mathematiques avanceé pour IA , definition du modèle théorique , premier algorithmes.</td>
+                        <td>9 mois</td>
+                        <td>Chercheur IA junior ;<br>Ingenieur IA<br>Poursuit en <strong>Doctorat 2 .</strong></td>
+                    </tr>
+                    <tr class="doctorat">
+                        <td>Doctorat2</td>
+                        <td>Developpement de modèles innovant ,entrainement à grande echelle , Publications dans des revues de haut niveau ,evaluation expérimentale.</td>
+                        <td>9 mois</td>
+                        <td>Chercher en IA ;<br>Expert IA strategique ;<br>Ingenieur IA senior;<br> Data scientist ;<br>Enseignant chercheur.</td>
+                    </tr>
+                    
+                </tbody>                
             </table>
         </section>
         
